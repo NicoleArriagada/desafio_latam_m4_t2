@@ -1,5 +1,5 @@
 
-import { Card, Button } from 'react-bootstrap';
+/*import { Card, Button } from 'react-bootstrap';
 import formatPrice from '../helpers/formatPrice';
 
 const CardPizza = ({ name, price, ingredients, img }) => {
@@ -26,4 +26,27 @@ const CardPizza = ({ name, price, ingredients, img }) => {
   );
 };
 
+export default CardPizza;*/
+const CardPizza = ({ pizza }) => {
+  const { name, img, ingredients, price, desc } = pizza;
+
+  return (
+    <div className="card h-100 shadow">
+      <img src={img} className="card-img-top" alt={name} />
+      <div className="card-body">
+        <h5 className="card-title text-capitalize">{name}</h5>
+        <p className="card-text">{desc}</p>
+        <ul>
+          {ingredients.map((ing, i) => (
+            <li key={i}>{ing}</li>
+          ))}
+        </ul>
+        <p className="fw-bold">${price.toLocaleString("es-CL")}</p>
+        <button className="btn btn-primary w-100">Agregar</button>
+      </div>
+    </div>
+  );
+};
+
 export default CardPizza;
+

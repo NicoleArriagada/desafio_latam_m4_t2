@@ -3,7 +3,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 // import Home from './pages/Home';
 // import RegisterPage from './pages/RegisterPage';
-import LoginPage from './pages/LoginPage';
+//import LoginPage from './pages/LoginPage';
+import Cart from "./components/Cart";
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       <Navbar />
       {/* <Home /> */}
       {/* <RegisterPage /> */}
-      <LoginPage />
+      {/*<LoginPage />*/}
+       <Cart />
       <Footer />
     </div>
   );
